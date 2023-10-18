@@ -8,20 +8,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.cibertec.entity.Categoria;
-import com.cibertec.service.CategoriaService;
+import com.cibertec.entity.Pais;
+import com.cibertec.service.PaisService;
 
 @RestController
-@RequestMapping("/rest/categoria")
-public class CategoriaController {
+@RequestMapping("/rest/pais")
+public class PaisController {
 
 	@Autowired
-	private CategoriaService service;
+	private PaisService service;
 	
 	@ResponseBody
-	@GetMapping("/listaCategoria")
-	public List<Categoria> lista(){
-		List<Categoria> lstSalida =  service.listaCategoriaOrdenada();
+	@GetMapping("/listaPais")
+	public List<Pais> lista(){
+		List<Pais> lstSalida =  service.listaTodos();
 		return lstSalida;
 	}
 }

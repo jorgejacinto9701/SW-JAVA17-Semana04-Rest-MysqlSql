@@ -11,11 +11,12 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-@Table(name = "categoria")
-public class Categoria {
+@Table(name = "pais")
+public class Pais {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int idCategoria;
+	private int idPais;
+	private String iso;
 	private String nombre;
 }
